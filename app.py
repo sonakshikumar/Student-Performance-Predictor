@@ -22,7 +22,8 @@ failures = st.selectbox("Past Class Failures", [0, 1, 2, 3])
 # Create input dataframe
 # UCI dataset has 33 features → we pad remaining with zeros
 input_data = pd.DataFrame(
-    [[G1, G2, absences, studytime, failures] + [0]*28]
+    [[studytime, failures, absences, G1, G2]],
+    columns=["studytime", "failures", "absences", "G1", "G2"]
 )
 
 # Predict
