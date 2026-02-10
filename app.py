@@ -3,6 +3,7 @@ import pandas as pd
 import joblib
 
 model = joblib.load("student_model.pkl")
+st.write("Model expects:", model.n_features_in_, "features")
 
 # Page config
 st.set_page_config(page_title="Student Performance Predictor")
